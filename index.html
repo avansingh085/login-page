@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin:0px 0px;
+        padding:0px 0px;
+        color:white;
+    }
+    .main{
+        height:100vh;
+        width:100%;
+        background-color:rgb(9, 9, 22);
+        display:grid;
+        align-items: center;
+        justify-items: center;
+    }
+    form,table{
+        height:200px;
+        width:400px;
+        border: 1px solid rgb(191, 23, 206);
+        border-top:transparent;
+        border-bottom:transparent;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .submit{
+        height:40px;
+        width:100px;
+        border-radius: 5px;
+        background-color: rgb(19, 190, 90);
+        border:1px solid rgb(51, 227, 16);
+        
+    }
+    input[type=email],input[type=password]{
+        height:30px;
+        width:200px;
+        border-radius: 4px;
+        outline:none;
+    }
+    .submit:hover{
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <div class="main">
+        <form action="/getData" method="POST">
+            <table>
+            <tr><td>Email Id:</td><td><input type="email" name="email" placeholder="enter email"  required></td></tr>
+            <tr><td>Password:</td><td><input type="password" name="password" placeholder="enter password" required></td></tr>
+            
+            <tr ><td colspan="2"><input type="submit" value="submit" class="submit"></td></tr>
+                 </table>
+        </form>
+    </div>
+</body>
+</html>

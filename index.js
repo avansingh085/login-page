@@ -52,6 +52,6 @@ console.log("you have alredey login");
 res.redirect('/login');
  })
  app.get('/login',(req,res)=>{
- res.sendFile(__dirname+'/loginpage.html')
+ res.sendFile(__dirname+'/index.html')
  })
 app.listen(3000);

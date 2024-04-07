@@ -31,25 +31,25 @@ app.use(flash());
  let email=req.body.email;
  let password=req.body.password;
  var check=0;
-//    db.query(`select Email from Login where passwords='${password}'`,async (err,result)=>{
-//     if(err)
-//     throw err;
-//     check=result.length;
-//    if(check<=0)
-//    {
-//     // db.query(`insert into Login (Email,Passwords) values('${email}','${password}')`,(err,result)=>{
-//     if(err)
-//     throw err;
-//     console.log("you have login succesfully");
-//   });
-// }
-// else
-// {
+   db.query(`select Email from Login where passwords='${password}'`,async (err,result)=>{
+    if(err)
+    throw err;
+    check=result.length;
+   if(check<=0)
+   {
+    // db.query(`insert into Login (Email,Passwords) values('${email}','${password}')`,(err,result)=>{
+    if(err)
+    throw err;
+    console.log("you have login succesfully");
+  });
+}
+else
+{
   
-// console.log("you have alredey login");
-// }
+console.log("you have alredey login");
+}
   
-//     });
+    });
 res.redirect('/login');
  })
  app.get('/login',(req,res)=>{
